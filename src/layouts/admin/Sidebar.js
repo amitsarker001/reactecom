@@ -7,9 +7,13 @@ return (
     <div className="sb-sidenav-menu">
         <div className="nav">
             <div className="sb-sidenav-menu-heading">Core</div>
-            <Link className="nav-Link" to="/admin">
+            <Link className="nav-Link" to="/admin/dashboard">
                 <div className="sb-nav-Link-icon"><i className="fas fa-tachometer-alt"></i></div>
                 Dashboard
+            </Link>
+            <Link className="nav-Link" to="/admin/profile">
+                <div className="sb-nav-Link-icon"><i className="fas fa-tachometer-alt"></i></div>
+                Profile
             </Link>
             <div className="sb-sidenav-menu-heading">Interface</div>
             <Link className="nav-Link collapsed" to="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">

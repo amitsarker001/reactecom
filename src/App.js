@@ -1,15 +1,22 @@
-import React from 'react'
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
+import React from 'react';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
-import MasterLayout from './layouts/admin/MasterLayout'
+import MasterLayout from './layouts/admin/MasterLayout';
+import Dashboard from './components/admin/Dashboard';
+import Profile from './components/admin/Profile';
 
-const App = () => {
+    function App() {
   return (
-    <Router>
+    <div className="App">
+      <Router>
         <Routes>
-          <Route exact path="/admin/dashboard" element={<MasterLayout/>}/>
+        <Route path="/admin" element={<MasterLayout />} > 
+        <Route path='/admin/dashboard' element={<Dashboard />}/>
+        <Route path='/admin/profile' element={<Profile />}/>
+        </Route>
         </Routes>
-    </Router>
+      </Router>
+    </div>
   );
 }
 
